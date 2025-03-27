@@ -1,0 +1,158 @@
+2025-03-27 18:42:41 [INFO]: Starting server...  {
+  "service": "telegram-channel-api"
+}
+2025-03-27 18:42:41 [INFO]: Connecting to MongoDB...  {
+  "service": "telegram-channel-api"
+}
+2025-03-27 18:42:41 [INFO]: Connected to MongoDB  {
+  "service": "telegram-channel-api"
+}
+2025-03-27 18:42:41 [INFO]: Setting up cron jobs...  {
+  "service": "telegram-channel-api"
+}
+2025-03-27 18:42:41 [INFO]: Daily membership check scheduled  {
+  "service": "telegram-channel-api"
+}
+2025-03-27 18:42:41 [INFO]: Expiry notifications scheduled  {
+  "service": "telegram-channel-api"
+}
+2025-03-27 18:42:41 [INFO]: Starting Express server on port 3000...  {
+  "service": "telegram-channel-api"
+}
+2025-03-27 18:42:41 [INFO]: Launching Telegram bot...  {
+  "service": "telegram-channel-api"
+}
+2025-03-27 18:42:41 [INFO]: Server running on port 3000  {
+  "service": "telegram-channel-api"
+}
+2025-03-27 18:42:56 [ERROR]: Failed to start server:  {
+  "service": "telegram-channel-api",
+  "error": {
+    "response": {
+      "ok": false,
+      "error_code": 409,
+      "description": "Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"
+    },
+    "on": {
+      "method": "getUpdates",
+      "payload": {
+        "timeout": 50,
+        "offset": 0,
+        "allowed_updates": []
+      }
+    }
+  }
+}
+2025-03-27 19:04:54 [INFO]: Starting server...  {
+  "service": "telegram-channel-api"
+}
+2025-03-27 19:04:54 [INFO]: Connecting to MongoDB...  {
+  "service": "telegram-channel-api"
+}
+2025-03-27 19:04:54 [INFO]: Connected to MongoDB  {
+  "service": "telegram-channel-api"
+}
+2025-03-27 19:04:54 [INFO]: Setting up cron jobs...  {
+  "service": "telegram-channel-api"
+}
+2025-03-27 19:04:54 [INFO]: Daily membership check scheduled  {
+  "service": "telegram-channel-api"
+}
+2025-03-27 19:04:54 [INFO]: Expiry notifications scheduled  {
+  "service": "telegram-channel-api"
+}
+2025-03-27 19:04:54 [INFO]: Starting Express server on port 3000...  {
+  "service": "telegram-channel-api"
+}
+2025-03-27 19:04:54 [INFO]: Launching Telegram bot...  {
+  "service": "telegram-channel-api"
+}
+2025-03-27 19:04:54 [INFO]: Server running on port 3000  {
+  "service": "telegram-channel-api"
+}
+2025-03-27 19:07:32 [INFO]: Starting server...  
+2025-03-27 19:07:32 [INFO]: Connecting to MongoDB...  
+2025-03-27 19:07:32 [INFO]: Connected to MongoDB  
+2025-03-27 19:07:32 [INFO]: Setting up cron jobs...  
+2025-03-27 19:07:32 [INFO]: Daily membership check scheduled  
+2025-03-27 19:07:32 [INFO]: Expiry notifications scheduled  
+2025-03-27 19:07:32 [INFO]: Starting Express server on port 3000...  
+2025-03-27 19:07:32 [INFO]: Launching Telegram bot...  
+2025-03-27 19:07:32 [INFO]: Server running on port 3000  
+2025-03-27 19:41:44 [INFO]: Starting server...  
+2025-03-27 19:41:44 [INFO]: Connecting to MongoDB...  
+2025-03-27 19:41:44 [INFO]: Connected to MongoDB  
+2025-03-27 19:41:44 [INFO]: Setting up cron jobs...  
+2025-03-27 19:41:44 [INFO]: Daily membership check scheduled  
+2025-03-27 19:41:44 [INFO]: Expiry notifications scheduled  
+2025-03-27 19:41:44 [INFO]: Starting Express server on port 3000...  
+2025-03-27 19:41:44 [INFO]: Launching Telegram bot...  
+2025-03-27 19:41:44 [INFO]: Server running on port 3000  
+2025-03-27 19:42:01 [ERROR]: Failed to start server:  
+2025-03-27 19:42:29 [INFO]: Starting server...  
+2025-03-27 19:42:29 [INFO]: Connecting to MongoDB...  
+2025-03-27 19:42:29 [INFO]: Connected to MongoDB  
+2025-03-27 19:42:29 [INFO]: Setting up cron jobs...  
+2025-03-27 19:42:29 [INFO]: Daily membership check scheduled  
+2025-03-27 19:42:29 [INFO]: Expiry notifications scheduled  
+2025-03-27 19:42:29 [INFO]: Starting Express server on port 3000...  
+2025-03-27 19:42:29 [INFO]: Launching Telegram bot...  
+2025-03-27 19:42:29 [INFO]: Server running on port 3000  
+2025-03-27 19:42:58 [ERROR]: Failed to start server:  
+2025-03-27 20:13:58 [INFO]: Starting server...  
+2025-03-27 20:13:58 [INFO]: Connecting to MongoDB...  
+2025-03-27 20:13:58 [INFO]: Connected to MongoDB  
+2025-03-27 20:13:58 [INFO]: Setting up cron jobs...  
+2025-03-27 20:13:58 [INFO]: Daily membership check scheduled  
+2025-03-27 20:13:58 [INFO]: Expiry notifications scheduled  
+2025-03-27 20:13:58 [INFO]: Starting Express server on port 3000...  
+2025-03-27 20:13:58 [INFO]: Launching Telegram bot...  
+2025-03-27 20:13:58 [INFO]: Server running on port 3000  
+2025-03-27 20:14:47 [INFO]: Starting server...  
+2025-03-27 20:14:47 [INFO]: Connecting to MongoDB...  
+2025-03-27 20:14:48 [INFO]: Connected to MongoDB  
+2025-03-27 20:14:48 [INFO]: Setting up cron jobs...  
+2025-03-27 20:14:48 [INFO]: Daily membership check scheduled  
+2025-03-27 20:14:48 [INFO]: Expiry notifications scheduled  
+2025-03-27 20:14:48 [INFO]: Starting Express server on port 3000...  
+2025-03-27 20:14:48 [INFO]: Launching Telegram bot...  
+2025-03-27 20:14:48 [INFO]: Server running on port 3000  
+2025-03-27 20:15:20 [ERROR]: Failed to start server:  
+2025-03-27 20:17:05 [INFO]: Starting server...  
+2025-03-27 20:17:05 [INFO]: Connecting to MongoDB...  
+2025-03-27 20:17:05 [INFO]: Connected to MongoDB  
+2025-03-27 20:17:05 [INFO]: Setting up cron jobs...  
+2025-03-27 20:17:05 [INFO]: Daily membership check scheduled  
+2025-03-27 20:17:05 [INFO]: Expiry notifications scheduled  
+2025-03-27 20:17:05 [INFO]: Starting Express server on port 3000...  
+2025-03-27 20:17:05 [INFO]: Launching Telegram bot...  
+2025-03-27 20:17:05 [INFO]: Server running on port 3000  
+2025-03-27 20:17:50 [ERROR]: Failed to start server:  
+2025-03-27 20:17:57 [INFO]: Starting server...  
+2025-03-27 20:17:57 [INFO]: Connecting to MongoDB...  
+2025-03-27 20:17:57 [INFO]: Connected to MongoDB  
+2025-03-27 20:17:57 [INFO]: Setting up cron jobs...  
+2025-03-27 20:17:57 [INFO]: Daily membership check scheduled  
+2025-03-27 20:17:57 [INFO]: Expiry notifications scheduled  
+2025-03-27 20:17:57 [INFO]: Starting Express server on port 3000...  
+2025-03-27 20:17:57 [INFO]: Launching Telegram bot...  
+2025-03-27 20:17:57 [INFO]: Server running on port 3000  
+2025-03-27 20:18:38 [INFO]: Starting server...  
+2025-03-27 20:18:38 [INFO]: Connecting to MongoDB...  
+2025-03-27 20:18:39 [INFO]: Connected to MongoDB  
+2025-03-27 20:18:39 [INFO]: Setting up cron jobs...  
+2025-03-27 20:18:39 [INFO]: Daily membership check scheduled  
+2025-03-27 20:18:39 [INFO]: Expiry notifications scheduled  
+2025-03-27 20:18:39 [INFO]: Starting Express server on port 3000...  
+2025-03-27 20:18:39 [INFO]: Launching Telegram bot...  
+2025-03-27 20:18:39 [INFO]: Server running on port 3000  
+2025-03-27 20:19:04 [ERROR]: Failed to start server:  
+2025-03-27 20:19:37 [INFO]: Starting server...  
+2025-03-27 20:19:37 [INFO]: Connecting to MongoDB...  
+2025-03-27 20:19:37 [INFO]: Connected to MongoDB  
+2025-03-27 20:19:37 [INFO]: Setting up cron jobs...  
+2025-03-27 20:19:37 [INFO]: Daily membership check scheduled  
+2025-03-27 20:19:37 [INFO]: Expiry notifications scheduled  
+2025-03-27 20:19:37 [INFO]: Starting Express server on port 3000...  
+2025-03-27 20:19:37 [INFO]: Launching Telegram bot...  
+2025-03-27 20:19:37 [INFO]: Server running on port 3000  

@@ -1,0 +1,10 @@
+{
+    "name": "fullstack-app",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "install": "cd server && npm install && cd ../miniapp && npm install",
+        "build": "cd miniapp && npm run build",
+        "start": "cd server && node index.js"
+    }
+}
