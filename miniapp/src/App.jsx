@@ -44,7 +44,7 @@ function App() {
     
     initializeTelegram();
 
-    // setTelegramUser({id:"983274103"})
+    // setTelegramUser({id:"12345678"})
 
   }, []);
 
