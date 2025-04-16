@@ -156,16 +156,16 @@ async function checkStatus(ctx) {
     if (!user) {
       return ctx.reply(
         'You don\'t have an active subscription yet.\n\n' +
-        'Click the button below to get started!',
+        'Open the mini app to get started!',
         getMiniAppKeyboard()
       );
     }
 
     // Check if user has any payment history
-    if (!user.paymentHistory || user.paymentHistory.length === 0) {
+    if (!user.subscription?.paymentHistory || user.subscription?.paymentHistory?.length === 0) {
       return ctx.reply(
         'You are not a subscriber of our Premium channel.\n\n' +
-        'Click the button below to get access.',
+        'Open the mini app to get started!',
         getMiniAppKeyboard()
       );
     }
@@ -199,8 +199,8 @@ async function checkStatus(ctx) {
       }
     } else {
       await ctx.reply(
-        'Your subscription has expired.\n\n' +
-        'Click the button below to renew!',
+        'You are not a subscriber of our Premium channel.\n\n' +
+        'Click the button below to get access.',
         getMiniAppKeyboard()
       );
     }
