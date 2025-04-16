@@ -45,7 +45,7 @@ function App() {
     
     initializeTelegram();
 
-    // setTelegramUser({id:"983274103"})
+    // setTelegramUser({id:"12345678"})
 
   }, []);
 
@@ -60,11 +60,15 @@ function App() {
     );
   }
 
+   
+
   if (!telegramUser) {
     return (
       <main className="flex min-h-screen flex-col items-center justify-center p-6 bg-gradient-to-b from-gray-900 to-black">
         <div className="bg-gray-800 p-8 rounded-xl shadow-2xl border border-blue-500/30 max-w-md text-center">
-          <FaExclamationTriangle className="w-16 h-16 text-blue-500 mx-auto mb-4" />
+          <svg className="w-16 h-16 text-blue-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
           <p className="text-xl text-gray-200 font-medium">Please open this app within Telegram</p>
         </div>
       </main>
