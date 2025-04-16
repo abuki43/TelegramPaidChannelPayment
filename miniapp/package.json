@@ -19,6 +19,7 @@
     "buffer": "^6.0.3",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
+    "react-icons": "^5.5.0",
     "ton": "^13.9.0",
     "vite-plugin-terminal": "^1.2.0"
   },

@@ -33,7 +33,7 @@ async function createInviteLink(userId) {
 // Create keyboard with mini app button
 const getMiniAppKeyboard = () => {
   return Markup.keyboard([
-    [Markup.button.webApp('💎 Open Premium Access', process.env.MINIAPP_URL)],
+    [Markup.button.webApp('💎 Open Premium Access', process.env.MINIAPP_URL, { mini_app: true })],
     [Markup.button.text('📊 Check Status')]
   ]).resize();
 };
@@ -160,22 +160,43 @@ async function checkStatus(ctx) {
         getMiniAppKeyboard()
       );
     }
-    if(!user.paymentHistory){
-      await ctx.reply(
-        `Your are not subcscriber of our Premium channel.\n\n`+
-        'Click the below button to be get access.',
+
+    // Check if user has any payment history
+    if (!user.paymentHistory || user.paymentHistory.length === 0) {
+      return ctx.reply(
+        'You are not a subscriber of our Premium channel.\n\n' +
+        'Click the button below to get access.',
         getMiniAppKeyboard()
       );
     }
-    else if (user.subscription?.isActive) {
+
+    // Check subscription status
+    if (user.subscription?.isActive) {
       const expiryDate = new Date(user.subscription.expirationDate);
-      await ctx.reply(
-        `Your subscription is active! 🎉\n\n` +
-        `Expires: ${expiryDate.toLocaleDateString()}\n` +
-        `Total months subscribed: ${user.totalMonths}\n\n` +
-        `Want to extend? Click the button below!`,
-        getMiniAppKeyboard()
-      );
+      const now = new Date();
+      
+      // Double check if subscription is actually active
+      if (expiryDate > now) {
+        await ctx.reply(
+          `Your subscription is active! 🎉\n\n` +
+          `Expires: ${expiryDate.toLocaleDateString()}\n` +
+          `Total months subscribed: ${user.totalMonths || 0}\n\n` +
+          `Want to extend? Click the button below!`,
+          getMiniAppKeyboard()
+        );
+      } else {
+        // Update subscription status if it's expired
+        await User.findOneAndUpdate(
+          { userId },
+          { 'subscription.isActive': false }
+        );
+        
+        await ctx.reply(
+          'Your subscription has expired.\n\n' +
+          'Click the button below to renew!',
+          getMiniAppKeyboard()
+        );
+      }
     } else {
       await ctx.reply(
         'Your subscription has expired.\n\n' +
@@ -185,7 +206,11 @@ async function checkStatus(ctx) {
     }
   } catch (error) {
     console.error('Error checking status:', error);
-    ctx.reply('Sorry, something went wrong. Please try again later.');
+    await ctx.reply(
+      'Sorry, something went wrong while checking your status.\n' +
+      'Please try again later or contact support.',
+      getMiniAppKeyboard()
+    );
   }
 }
 

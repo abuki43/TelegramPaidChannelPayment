@@ -2,6 +2,7 @@ import { useTonConnectUI,useTonAddress } from "@tonconnect/ui-react";
 import { useState, useEffect } from "react";
 import api from "../api";
 import { beginCell } from "@ton/core"; 
+import { FaCheckCircle, FaCreditCard, FaExclamationTriangle, FaCoins, FaBolt, FaLink } from 'react-icons/fa';
 
 
 const Payment = ({ user }) => {
@@ -86,16 +87,12 @@ const Payment = ({ user }) => {
       <div className="bg-gray-800/80 rounded-xl shadow-lg border border-blue-500/20 overflow-hidden transition-all duration-300 hover:shadow-blue-500/10 hover:border-blue-500/40 h-full">
         <div className="p-6">
           <h2 className="text-xl font-semibold text-blue-400 mb-4 flex items-center">
-            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg>
+            <FaCheckCircle className="w-5 h-5 mr-2" />
             Subscription Status
           </h2>
           
           <div className="bg-green-900/20 border border-green-500/30 rounded-lg p-4 mb-4 text-center">
-            <svg className="w-12 h-12 text-green-500 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg>
+            <FaCheckCircle className="w-12 h-12 text-green-500 mx-auto mb-2" />
             <p className="text-lg text-green-400 font-medium mb-1">
               Subscribed until {expiry.toLocaleDateString()}
             </p>
@@ -117,9 +114,7 @@ const Payment = ({ user }) => {
     <div className="bg-gray-800/80 rounded-xl shadow-lg border border-blue-500/20 overflow-hidden transition-all duration-300 hover:shadow-blue-500/10 hover:border-blue-500/40 h-full">
       <div className="p-6">
         <h2 className="text-xl font-semibold text-blue-400 mb-4 flex items-center">
-          <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2z"></path>
-          </svg>
+          <FaCreditCard className="w-5 h-5 mr-2" />
           Payment
         </h2>
         
@@ -131,9 +126,7 @@ const Payment = ({ user }) => {
             </div>
           ) : paymentStatus === "error" ? (
             <div className="space-y-4">
-              <svg className="w-12 h-12 text-red-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-              </svg>
+              <FaExclamationTriangle className="w-12 h-12 text-red-500 mx-auto" />
               <p className="text-red-400 text-lg font-medium">Payment failed</p>
               <p className="text-gray-400 mb-4">If you think there is a problem contact the admins.</p>
               <button 
@@ -147,9 +140,7 @@ const Payment = ({ user }) => {
             <div className="space-y-4">
               <div className="flex justify-center items-center mb-2">
                 <div className="bg-blue-900/30 px-4 py-2 rounded-lg inline-flex items-center">
-                  <svg className="w-6 h-6 text-blue-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                  </svg>
+                  <FaCoins className="w-6 h-6 text-blue-400 mr-2" />
                   <span className="text-lg font-medium text-white">0.01 TON for membership</span>
                 </div>
               </div>
@@ -159,16 +150,12 @@ const Payment = ({ user }) => {
               >
                 {userFriendlyAddress ? (
                   <span className="flex items-center justify-center">
-                    <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                    </svg>
+                    <FaBolt className="w-5 h-5 mr-2" />
                     Pay Now
                   </span>
                 ) : (
                   <span className="flex items-center justify-center">
-                    <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
-                    </svg>
+                    <FaLink className="w-5 h-5 mr-2" />
                     Connect Wallet
                   </span>
                 )}
