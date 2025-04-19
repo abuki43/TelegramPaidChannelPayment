@@ -1,6 +1,8 @@
 # Telegram Paid Channel Subscription Service
 
-A complete solution for managing paid subscriptions to a Telegram channel using TON payments and Telegram Mini App.
+A simple solution for managing paid subscriptions to a Telegram channel using TON payments and Telegram Mini App.
+you can test the bot using this bot. (https://t.me/privateChannelOwner_bot)
+it is hosted on render(free tier) it may take upto 20 second for the first response.
 
 ## Overview
 
