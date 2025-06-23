@@ -64,7 +64,7 @@ export function verifyTelegramInitData(initData) {
       return false;
     }
 
-    const BOT_TOKEN = process.env.BOT_TOKEN || '8050932071:AAGv8Su7JzzgWb-25GCkpRWMfCGkuT_xqjk';
+    const BOT_TOKEN = process.env.BOT_TOKEN;
     console.log('[verifyTelegramInitData] Using BOT_TOKEN:', BOT_TOKEN);
 
     // Validate using the package
