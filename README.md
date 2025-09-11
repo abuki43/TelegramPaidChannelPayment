@@ -4,6 +4,8 @@ A simple solution for managing paid subscriptions to a Telegram channel using TO
 you can test the bot using this bot. (https://t.me/privateChannelOwner_bot)
 it is hosted on render(free tier) it may take upto 20 second for the first response.
 
+Reminder: This is not a production-ready project; this was the MYP (first version) build. It does not have a webhook, so it works with a faucet token.
+
 ## Overview
 
 This project enables you to create a paid membership system for your Telegram channel. Users can subscribe via TON cryptocurrency payments through a Telegram Mini App interface.
